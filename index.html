@@ -672,6 +672,10 @@
     .nav-desktop { display: none !important; }
     #hamburger { display: flex !important; }
   }
+  @media (max-width: 600px) {
+    .product-card { flex-direction: column !important; }
+    .product-cover { flex: 0 0 auto !important; min-height: 180px !important; width: 100% !important; }
+  }
 </style>
 <script>
   function toggleMenu() {
@@ -1065,21 +1069,20 @@
     <h2 style="font-family:'Outfit',sans-serif; font-size:clamp(28px,5vw,48px); font-weight:900; letter-spacing:-0.02em; text-transform:uppercase; color:#ffffff; text-align:center; margin-bottom:12px;">Start Here. Train Smarter.</h2>
     <p style="font-family:'Inter',sans-serif; font-size:15px; color:rgba(255,255,255,0.5); text-align:center; margin-bottom:56px; max-width:480px; margin-left:auto; margin-right:auto;">Not ready for 1:1 coaching yet? These programs give you the structure — you bring the discipline.</p>
 
-    <div style="max-width:780px; margin:0 auto; background:#161616; border:1px solid rgba(255,255,255,0.08); border-radius:10px; overflow:hidden; display:flex; flex-wrap:wrap;">
+    <div class="product-card" style="max-width:700px; margin:0 auto; background:#161616; border:1px solid rgba(255,255,255,0.08); border-radius:10px; overflow:hidden; display:flex; flex-wrap:wrap;">
       <!-- Program Cover -->
-      <div style="flex:0 0 260px; min-height:320px; background:linear-gradient(145deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%); display:flex; flex-direction:column; align-items:center; justify-content:center; padding:32px 24px; position:relative; overflow:hidden;">
+      <div class="product-cover" style="flex:0 0 220px; background:linear-gradient(145deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%); display:flex; flex-direction:column; align-items:center; justify-content:center; padding:32px 24px; position:relative; overflow:hidden; min-height:220px;">
         <div style="position:absolute; top:0; left:0; right:0; bottom:0; background:repeating-linear-gradient(45deg, transparent, transparent 20px, rgba(155,93,229,0.03) 20px, rgba(155,93,229,0.03) 40px);"></div>
         <div style="position:relative; text-align:center;">
-          <div style="font-family:'Outfit',sans-serif; font-size:11px; font-weight:700; letter-spacing:0.20em; text-transform:uppercase; color:#9B5DE5; margin-bottom:20px; border:1px solid rgba(155,93,229,0.4); padding:5px 12px; border-radius:3px; display:inline-block;">ZP Physiques</div>
-          <div style="font-family:'Outfit',sans-serif; font-size:clamp(22px,4vw,30px); font-weight:900; color:#ffffff; line-height:1.15; text-transform:uppercase; letter-spacing:-0.01em; margin-bottom:16px;">The Busy<br>Man's<br>5-Day PPL</div>
-          <div style="width:40px; height:2px; background:#9B5DE5; margin:0 auto 16px;"></div>
-          <div style="font-family:'Barlow Condensed',sans-serif; font-size:12px; font-weight:600; letter-spacing:0.15em; text-transform:uppercase; color:rgba(255,255,255,0.5);">Training System</div>
+          <div style="font-family:'Outfit',sans-serif; font-size:11px; font-weight:700; letter-spacing:0.20em; text-transform:uppercase; color:#9B5DE5; margin-bottom:16px; border:1px solid rgba(155,93,229,0.4); padding:4px 12px; border-radius:3px; display:inline-block;">ZP Physiques</div>
+          <div style="font-family:'Outfit',sans-serif; font-size:24px; font-weight:900; color:#ffffff; line-height:1.15; text-transform:uppercase; letter-spacing:-0.01em; margin-bottom:12px;">The Busy<br>Man's<br>5-Day PPL</div>
+          <div style="width:32px; height:2px; background:#9B5DE5; margin:0 auto 12px;"></div>
+          <div style="font-family:'Barlow Condensed',sans-serif; font-size:11px; font-weight:600; letter-spacing:0.15em; text-transform:uppercase; color:rgba(255,255,255,0.4);">Instant Download</div>
         </div>
-        <div style="position:absolute; bottom:16px; left:0; right:0; text-align:center; font-family:'Outfit',sans-serif; font-size:11px; color:rgba(255,255,255,0.2); letter-spacing:0.08em;">INSTANT DOWNLOAD</div>
       </div>
 
       <!-- Content -->
-      <div style="flex:1; min-width:260px; padding:36px 32px;">
+      <div style="flex:1; min-width:260px; padding:28px 24px;">
         <div style="display:flex; align-items:center; gap:10px; margin-bottom:14px; flex-wrap:wrap;">
           <span style="font-family:'Barlow Condensed',sans-serif; font-size:11px; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:#ffffff; background:#9B5DE5; padding:4px 10px; border-radius:3px;">Self-Guided</span>
           <span style="font-family:'Barlow Condensed',sans-serif; font-size:11px; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:rgba(255,255,255,0.4); border:1px solid rgba(255,255,255,0.15); padding:4px 10px; border-radius:3px;">No 1:1 Coaching</span>
