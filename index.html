@@ -641,16 +641,45 @@
 <nav id="nav">
   <div class="container">
     <div style="display:flex; align-items:center; justify-content:space-between; width:100%;">
-      <div class="logo" style="flex-shrink:0;">ZP PHYSIQUES</div>
-      <div style="display:flex; align-items:center; gap:28px; flex-shrink:0;">
+      <div class="logo">ZP PHYSIQUES</div>
+      <!-- Desktop links -->
+      <div class="nav-desktop" style="display:flex; align-items:center; gap:28px;">
         <a href="#program" style="font-family:'Outfit',sans-serif; font-size:13px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:rgba(255,255,255,0.8); text-decoration:none;">How It Works</a>
         <a href="#products" style="font-family:'Outfit',sans-serif; font-size:13px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:rgba(255,255,255,0.8); text-decoration:none;">Programs</a>
         <a href="#transformations" style="font-family:'Outfit',sans-serif; font-size:13px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:rgba(255,255,255,0.8); text-decoration:none;">Results</a>
         <a href="https://form.typeform.com/to/cNzhU1VR" target="_blank" style="font-family:'Outfit',sans-serif; font-size:12px; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; color:#000000; background:#ffffff; padding:10px 20px; border-radius:4px; text-decoration:none;">Apply Now</a>
       </div>
+      <!-- Hamburger -->
+      <button id="hamburger" onclick="toggleMenu()" aria-label="Menu" style="display:none; background:none; border:none; cursor:pointer; padding:4px; flex-direction:column; gap:5px; align-items:flex-end;">
+        <span class="hb-line" style="display:block; width:24px; height:2px; background:#fff; transition:all 0.3s;"></span>
+        <span class="hb-line" style="display:block; width:18px; height:2px; background:#fff; transition:all 0.3s;"></span>
+        <span class="hb-line" style="display:block; width:24px; height:2px; background:#fff; transition:all 0.3s;"></span>
+      </button>
     </div>
   </div>
+  <!-- Mobile menu -->
+  <div id="mobile-menu" style="display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(14,14,14,0.98); backdrop-filter:blur(12px); z-index:200; flex-direction:column; align-items:center; justify-content:center; gap:40px;">
+    <button onclick="toggleMenu()" style="position:absolute; top:24px; right:24px; background:none; border:none; cursor:pointer; color:#fff; font-size:28px; line-height:1;">&#10005;</button>
+    <a href="#program" onclick="toggleMenu()" style="font-family:'Outfit',sans-serif; font-size:clamp(28px,8vw,42px); font-weight:900; letter-spacing:-0.01em; text-transform:uppercase; color:#ffffff; text-decoration:none;">How It Works</a>
+    <a href="#products" onclick="toggleMenu()" style="font-family:'Outfit',sans-serif; font-size:clamp(28px,8vw,42px); font-weight:900; letter-spacing:-0.01em; text-transform:uppercase; color:#ffffff; text-decoration:none;">Programs</a>
+    <a href="#transformations" onclick="toggleMenu()" style="font-family:'Outfit',sans-serif; font-size:clamp(28px,8vw,42px); font-weight:900; letter-spacing:-0.01em; text-transform:uppercase; color:#ffffff; text-decoration:none;">Results</a>
+    <a href="https://form.typeform.com/to/cNzhU1VR" target="_blank" onclick="toggleMenu()" style="font-family:'Outfit',sans-serif; font-size:15px; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; color:#000000; background:#ffffff; padding:16px 48px; border-radius:4px; text-decoration:none; margin-top:8px;">Apply Now</a>
+  </div>
 </nav>
+<style>
+  @media (max-width: 768px) {
+    .nav-desktop { display: none !important; }
+    #hamburger { display: flex !important; }
+  }
+</style>
+<script>
+  function toggleMenu() {
+    var m = document.getElementById('mobile-menu');
+    var open = m.style.display === 'flex';
+    m.style.display = open ? 'none' : 'flex';
+    document.body.style.overflow = open ? '' : 'hidden';
+  }
+</script>
 
 <!-- HERO -->
 <section id="hero">
